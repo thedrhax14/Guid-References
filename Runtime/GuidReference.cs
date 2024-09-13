@@ -95,6 +95,14 @@ namespace SaG.GuidReferences
             }
         }
 
+        public byte[] GetSerializedGuid() {
+            return serializedGuid;
+        }
+
+        public Guid GetGUID() {
+            return guid;
+        }
+
         public void RequestResolve()
         {
             GuidManagerSingleton.ResolveGuid(guid, addDelegate, removeDelegate);
